@@ -1,16 +1,14 @@
 import React from 'react'
-import Button from './Components/Button'
+import Login from './Pages/Auth/Login/index.js'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Pages/home/index.js'
 
 function App() {
   return (
-    <div className="App text-center">
-      <br />
-      <br />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <br />
-      <br />
-      <Button label="Start" backgroundColor="skyblue" />
-    </div>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
 
