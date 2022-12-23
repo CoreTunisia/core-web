@@ -3,15 +3,12 @@ import logo from '../../../assets/images/core-logo.jpg'
 
 export default function Login() {
   function login() {
-    console.log('user tried to connect')
+    // submit form
   }
   return (
     <div className="h-screen bg-dark-bg-primary">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <img className="w-28 h-28 mb-6" src={logo} alt="logo" />
-        {/* <a href="#" className="flex items-center mb-6 text-4xl font-semibold text-gray-900 dark:text-white">
-          Core
-        </a> */}
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-dark-bg-secondary dark:border-dark-bg-input">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
