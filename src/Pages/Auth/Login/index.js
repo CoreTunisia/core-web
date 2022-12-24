@@ -1,12 +1,14 @@
 import React from 'react'
 import logo from '../../../assets/images/core-logo.jpg'
+import DarkMode from './DarkMode.js'
 
 export default function Login() {
   function login() {
     // submit form
   }
   return (
-    <div className="h-screen bg-dark-bg-primary">
+    <div className="h-screen dark:bg-dark-bg-primary">
+      <DarkMode />
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <img className="w-28 h-28 mb-6" src={logo} alt="logo" />
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-dark-bg-secondary dark:border-dark-bg-input">
@@ -14,8 +16,8 @@ export default function Login() {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Sign in to your account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
-              <div>
+            <form className="space-y-4 md:space-y-6" action="#" onSubmit={login}>
+              {/* <div>
                 <label htmlFor="role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Please select your role
                 </label>
@@ -47,7 +49,7 @@ export default function Login() {
                     </label>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -104,8 +106,8 @@ export default function Login() {
               <button
                 type="submit"
                 className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300
-               font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                onClick={login}
+               font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary dark:bg-primary dark:hover:bg-primary-700 
+               dark:focus:ring-primary-800"
               >
                 Sign in
               </button>
