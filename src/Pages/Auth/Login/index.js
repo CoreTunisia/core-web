@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../../../assets/images/core-logo.jpg'
+import logoDark from '../../../assets/images/core-logo-dark.png'
+import logoLight from '../../../assets/images/core-logo-light.png'
 import DarkMode from './DarkMode.js'
 
 export default function Login() {
@@ -10,47 +11,14 @@ export default function Login() {
     <div className="h-screen dark:bg-dark-bg-primary">
       <DarkMode />
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <img className="w-28 h-28 mb-6" src={logo} alt="logo" />
+        <img className="w-28 h-28 mb-6 hidden dark:block" src={logoDark} alt="logo" />
+        <img className="w-28 h-28 mb-6 dark:hidden" src={logoLight} alt="logo" />
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-dark-bg-secondary dark:border-dark-bg-input">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Sign in to your account
             </h1>
             <form className="space-y-4 md:space-y-6" action="#" onSubmit={login}>
-              {/* <div>
-                <label htmlFor="role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Please select your role
-                </label>
-                <ul className="grid gap-6 w-full md:grid-cols-2">
-                  <li>
-                    <input type="radio" id="coach" name="role" value="coach" className="hidden peer" required />
-                    <label
-                      htmlFor="coach"
-                      className="inline-flex justify-center items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200
-                       cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600
-                        peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                    >
-                      <div className="block">
-                        <div className="w-full text-lg font-semibold">Coach</div>
-                      </div>
-                    </label>
-                  </li>
-                  <li>
-                    <input type="radio" id="trainee" name="role" value="trainee" className="hidden peer" />
-                    <label
-                      htmlFor="trainee"
-                      className="inline-flex justify-center items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 
-                      cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600
-                       peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                    >
-                      <div className="block">
-                        <div className="w-full text-lg font-semibold">Trainee</div>
-                      </div>
-                    </label>
-                  </li>
-                </ul>
-              </div> */}
-
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Your email
